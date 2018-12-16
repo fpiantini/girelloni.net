@@ -1,0 +1,39 @@
+{
+  "name": "girelloni.net",
+  "version": "1.0.0",
+  "description": "A site to collect and enjoy trekking experiences",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open 'google-chrome'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fpiantini/girelloni.net.git"
+  },
+  "keywords": [
+    "website",
+    "trekking",
+    "javascript"
+  ],
+  "author": "Francesco Piantini <francesco.piantini@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fpiantini/girelloni.net/issues"
+  },
+  "homepage": "https://github.com/fpiantini/girelloni.net#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}
