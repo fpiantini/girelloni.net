@@ -18,9 +18,9 @@ npm install
 
 This will download all the necessary packages in the `node_modules` directory.
 
-The following tools was used during the development:
+The following tools are used for the development:
 
  - [webpack](https://webpack.js.org/), webpack dev server and other webpack utilities
- - [babel](https://babeljs.io/) javascript compiler
+ - [babel](https://babeljs.io/) javascript compiler and polyfill library
  
 
