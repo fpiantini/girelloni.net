@@ -22,5 +22,14 @@ The following tools are used for the development:
 
  - [webpack](https://webpack.js.org/), webpack dev server and other webpack utilities
  - [babel](https://babeljs.io/) javascript compiler and polyfill library
- 
+
+To test the site enter the following command:
+
+```
+npm run start
+```
+
+This should open a browser on the `http://localhost:8080` and the application should appear.
+
+
 
