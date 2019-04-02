@@ -18,6 +18,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'css/style.css',
             template: './src/sample_css/girelloni.css'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'favicon.ico',
+            template: './src/favicon.ico'
         }) 
     ],
     module: {
