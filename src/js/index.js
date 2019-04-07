@@ -1,3 +1,5 @@
+import '../girelloni.css';
+//import homeImg from '../homeimg.png';
 import * as areasView from './views/areasView';
 
 var areasList;

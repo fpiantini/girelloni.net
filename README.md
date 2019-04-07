@@ -10,16 +10,17 @@ The development is currently at a very early stage, and proceeds very slowly dur
 
 The development is done mainly in javascript, using some nodejs tools to assist in the process.
 
-To setup the environment [fork and] clone the repository, then initialize the enviroment with the command:
+To setup the environment clone the repository, then initialize the project with the command:
 
 ```
-npm install
+yarn install
 ```
 
 This will download all the necessary packages in the `node_modules` directory.
 
 The following tools are used for the development:
 
+ - [yarn](https://yarnpkg.com/en/), fast and reliable nodejs packages dependency manager
  - [webpack](https://webpack.js.org/), webpack dev server and other webpack utilities
  - [babel](https://babeljs.io/) javascript compiler and polyfill library
 
@@ -30,6 +31,3 @@ npm run start
 ```
 
 This should open a browser on the `http://localhost:8080` and the application should appear.
-
-
-

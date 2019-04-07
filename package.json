@@ -1,39 +1,39 @@
 {
-  "name": "girelloni.net",
+  "name": "jsmodernsetup",
   "version": "1.0.0",
-  "description": "A site to collect and enjoy trekking experiences",
-  "main": "index.js",
+  "description": "A step by step explanation on how to setup development of a modern web project using npm, webpack, babel and other tools",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open 'google-chrome'"
+    "start": "webpack-dev-server --mode development --open 'firefox'"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/fpiantini/girelloni.net.git"
+    "url": "git+ssh://git@github.com/fpiantini/jsmodernsetup.git"
   },
-  "keywords": [
-    "website",
-    "trekking",
-    "javascript"
-  ],
   "author": "Francesco Piantini <francesco.piantini@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fpiantini/girelloni.net/issues"
+    "url": "https://github.com/fpiantini/jsmodernsetup/issues"
   },
-  "homepage": "https://github.com/fpiantini/girelloni.net#readme",
+  "homepage": "https://github.com/fpiantini/jsmodernsetup#readme",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-core": "^7.0.0-0",
+    "babel-loader": "7",
+    "babel-polyfill": "^7.0.0-0",
+    "babel-preset-env": "^7.0.0-0",
+    "copy-webpack-plugin": "^5.0.2",
+    "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   },
-  "dependencies": {
-    "babel-polyfill": "^6.26.0"
-  }
+  "dependencies": {}
 }

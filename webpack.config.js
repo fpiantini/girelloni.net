@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: ['babel-polyfill', './src/js/index.js'],
+    entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'
@@ -15,25 +16,26 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
-        new HtmlWebpackPlugin({
-            filename: 'css/style.css',
-            template: './src/sample_css/girelloni.css'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'favicon.ico',
-            template: './src/favicon.ico'
-        }) 
+        new CopyWebpackPlugin([
+            { from: 'static' }
+        ])
     ],
     module: {
         rules: [
             {
+                test: /\.css$/, use: ['style-loader', 'css-loader']
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             }
         ]
     }
-
 };
+
