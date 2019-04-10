@@ -1,30 +1,30 @@
 import '../girelloni.css';
 //import homeImg from '../homeimg.png';
+
+// --- Models ------------------------------------------
+import Areas from './models/areas'
+
+// ---- Views ------------------------------------------
 import * as areasView from './views/areasView';
 
-var areasList;
-
-// -----------------------------------------------------
-areasList =
-[ 
-  '{"name": "Toscana", "page": "toscana.html"}',
-  '{"name": "Italia", "page": "italia.html"}',
-  '{"name": "Mondo", "page": "mondo.html"}'
-];
-
-
+/**  globas state of the app 
+ * - Areas
+*/
+const state = {};
 
 // -----------------------------------------------------
 window.addEventListener('load', () => {
+
   var cssClass="divlight";
-  areasList.forEach(element => {
-    const area = JSON.parse(element);
-    //console.log(element);
 
-    areasView.renderItem(area, cssClass);
+  state.areas = new Areas();
+  state.areas.getAreas().forEach(e => {
 
+    areasView.renderItem(e, cssClass);
     cssClass = (cssClass === "divlight") ? "divdark" : "divlight";
 
   });
+
 });
 
+ 
