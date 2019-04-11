@@ -1,8 +1,8 @@
 export default class Areas {
 
   constructor() {
-    this.areasJsonList = 
-    [ 
+    this.areasJsonList =
+    [
       '{"name": "Toscana", "page": "toscana"}',
       '{"name": "Italia", "page": "italia"}',
       '{"name": "Mondo", "page": "mondo"}'

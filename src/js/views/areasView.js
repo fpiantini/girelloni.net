@@ -9,6 +9,6 @@ export const renderItem = (item, cssClass) => {
   elements.areasList.insertAdjacentHTML('beforeend', markup);
 };
 
-export const clearAreas = () => {
+export const clear = () => {
   elements.areasList.innerHTML = '';
 };

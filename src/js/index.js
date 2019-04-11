@@ -2,10 +2,9 @@ import '../girelloni.css';
 
 import { elements } from './views/base';
 
-//import homeImg from '../homeimg.png';
-
 // --- Models ------------------------------------------
-import Areas from './models/areas'
+import Areas from './models/areas';
+import Treks from './models/treks';
 
 // ---- Views ------------------------------------------
 import * as areasView from './views/areasView';
@@ -31,11 +30,15 @@ window.addEventListener('load', () => {
 });
 
 
+// -----------------------------------------------------
 window.addEventListener('hashchange', () => {
 
   const id = window.location.hash.replace('#', '');
-  console.log(`hash chanw hash: ${id}`);
-
+  if (id) {
+    areasView.clear();
+    var treks = new Treks();
+    treks.getTreksByArea(id);
+  }
 });
 
 
