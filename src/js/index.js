@@ -37,7 +37,7 @@ window.addEventListener('hashchange', () => {
   if (id) {
     areasView.clear();
     var treks = new Treks();
-    treks.getTreksByArea(id);
+    console.log(treks.getTreksByArea(id));
   }
 });
 

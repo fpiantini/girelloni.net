@@ -222,7 +222,16 @@ export default class Treks {
   }
 
   getTreksByArea(area) {
-      console.log(`FIXME - TBC - getTreksByArea(${area})`);
+      var selectedTreks = [];
+
+      this.getTreks().forEach(e => {
+        if ((e.region.toLowerCase() === area.toLowerCase()) || (e.nation.toLowerCase() === area.toLowerCase())) {
+            selectedTreks.push(e);
+        }
+      });
+
+      return selectedTreks;
+
   }
 
 }
