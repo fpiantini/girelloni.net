@@ -1,4 +1,7 @@
 import '../girelloni.css';
+
+import { elements } from './views/base';
+
 //import homeImg from '../homeimg.png';
 
 // --- Models ------------------------------------------
@@ -27,4 +30,12 @@ window.addEventListener('load', () => {
 
 });
 
- 
+
+window.addEventListener('hashchange', () => {
+
+  const id = window.location.hash.replace('#', '');
+  console.log(`hash chanw hash: ${id}`);
+
+});
+
+
