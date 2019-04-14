@@ -7,7 +7,8 @@ export const elements = {
   mainPageHeader: document.querySelector('.page__header'),
   areasList: document.querySelector('.areas__list'),
   treksList: document.querySelector('.treks__list'),
-  trekElement: document.querySelector('.trek__element')
+  trekElement: document.querySelector('.trek__element'),
+  mapElement: document.querySelector('.tobecompleted')
 };
 
 

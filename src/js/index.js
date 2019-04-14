@@ -1,5 +1,11 @@
 import '../girelloni.css';
 
+import 'leaflet_css';
+import 'leaflet_marker';
+import 'leaflet_marker_2x';
+import 'leaflet_marker_shadow';
+
+
 import { elements } from './views/base';
 
 // --- Models ------------------------------------------
@@ -51,12 +57,11 @@ function redrawPageBasedOnHash() {
       });
     }
     else {
-      console.log("This should be a page of a trek.");
       const trek = state.treks.getTrekById(strs[1]);
-      console.log(trek);
       if (trek) {
         trekView.renderPageHeader(trek);
         trekView.renderItem(trek);
+        trekView.fillMap(trek);
       }
     }
 
