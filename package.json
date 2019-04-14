@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "leaflet": "^1.4.0"
+    "leaflet": "^1.4.0",
+    "leaflet-gpx": "^1.0.0"
   }
 }
