@@ -1,3 +1,5 @@
+import { EWOULDBLOCK } from "constants";
+
 export default class Treks {
 
 
@@ -307,4 +309,12 @@ export default class Treks {
         }, []);
     }
 
+    // --------------------------------------------------------------------------
+    getTrekById(idToSearch) {
+        
+        console.log(`searching for a trek with id = ${idToSearch}`);
+        return this.treksList.find(e => {
+            return (e.id === idToSearch);
+        });
+    }
 }
