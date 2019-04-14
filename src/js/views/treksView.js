@@ -1,11 +1,12 @@
 import { elements } from './base';
 
 
-export const renderPageHeader = (item) => {
+export const renderPageHeader = (areaName) => {
 
   const markup = `
   <div class="divdark" id="header_image_and_text">
-    <p class='inevidence'>${item}</p>
+    <img id='home' class='autowidth' src='${areaName}.jpg'/>
+    <p class='inevidence'>${areaName}</p>
   </div>
   `;
   elements.mainPageHeader.insertAdjacentHTML('beforeend', markup);

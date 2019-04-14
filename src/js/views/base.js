@@ -1,6 +1,6 @@
 export const elements = {
 
-  mainPageImg: 'homeimg.png',
+  mainPageImg: 'homeimg.jpg',
   mainPageTitle: 'Un sito per chi ama le passeggiate all\'aria aperta',
   mainPageMotto: 'Drogate i vostri figli di natura e di bellezza, perché è la sola dipendenza che li può rendere liberi. (P.C.)',
 
