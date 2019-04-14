@@ -19,31 +19,30 @@ state.treks = new Treks();
 
 // -----------------------------------------------------
 window.addEventListener('load', () => {
-
-  var cssClass="divlight";
-
-  state.treks.getClassificationAreas().forEach(e => {
-    areasView.renderItem(e, cssClass);
-    cssClass = (cssClass === "divlight") ? "divdark" : "divlight";
-  });
-
+  redrawPageBasedOnHash()
 });
 
+window.addEventListener('hashchange', () => {
+  redrawPageBasedOnHash()
+});
 
 // -----------------------------------------------------
-window.addEventListener('hashchange', () => {
+function redrawPageBasedOnHash() {
 
   const id = window.location.hash.replace('#', '');
+
+  areasView.clear();
+  treksView.clear();
+  trekView.clear();
+  console.log(`Hash has changed!   ID = ${id}`);
+
+  var cssClass="divlight";
 
   if (id) {
 
     const strs = id.split("__")
     console.log(strs);
 
-    var cssClass="divlight";
-    areasView.clear();
-    treksView.clear();
-    trekView.clear();
     if (strs[0] === "area") {
       state.treks.getTreksByArea(strs[1]).forEach(t => {
         treksView.renderItem(t, cssClass);
@@ -54,7 +53,12 @@ window.addEventListener('hashchange', () => {
       trekView.renderItem(strs[1]);
     }
   }
+  else {
+    state.treks.getClassificationAreas().forEach(e => {
+      areasView.renderItem(e, cssClass);
+      cssClass = (cssClass === "divlight") ? "divdark" : "divlight";
+    });  
+  }
 
-});
-
+}
 
