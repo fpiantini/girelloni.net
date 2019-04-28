@@ -4,6 +4,7 @@ import * as lgpx from 'leaflet-gpx';
 import  { tfKey, mpKey }  from '../config'
 
 var L = require('leaflet');
+var theMap;
 
 // -------------------------------------------------------------------------
 export const renderPageHeader = (item) => {
@@ -19,7 +20,7 @@ export const renderPageHeader = (item) => {
       <fieldset class="mapLayerChooser">
         <legend class="mapLayerChooser">Tipo di mappa base</legend>
 
-        <p>
+        <p class="layer-chooser-radios" id="layer-chooser-radios">
           <label><input type="radio" name="basemap" value="otm" checked="checked" /> OpenTopoMap</label>
           <label><input type="radio" name="basemap" value="fum" /> 4UMaps</label>
           <label><input type="radio" name="basemap" value="tf" /> ThunderForest Landscape</label>
@@ -30,6 +31,8 @@ export const renderPageHeader = (item) => {
   </div>
 `;
   elements.mainPageHeader.insertAdjacentHTML('beforeend', markup);
+  
+  theMap = new L.map('mapid');
 
 };
 
@@ -52,68 +55,92 @@ export const clear = () => {
 // -------------------------------------------------------------------------
 export const fillMap = (trek) => {
 
-  console.log(`fillMap() called for trek = ${trek.trackfile}`);
-  var mymap = new L.map('mapid');
-  //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-  mymap.scrollWheelZoom.disable();
+  theMap.scrollWheelZoom.disable();
 
-  redrawMap(mymap, trek);
+  redrawMap(trek);
 
 };
 
 // -------------------------------------------------------------------------
-const redrawMap = (map, trek) => {
+export const refreshMap = (trek) => {
+  redrawMap(trek);
+}
+// -------------------------------------------------------------------------
+const redrawMap = (trek) => {
 
-  console.log(`redrawMap() called for trek = ${trek.trackfile}`);
-  showLayers(map, trek);
+  showLayers(trek);
 
 };
 
 // -------------------------------------------------------------------------
-const showLayers = (map, trek) => {
+const showLayers = (trek) => {
 
-  console.log('showLayers() called');
-  showSelectedBaseMap(map, 'otm');
-  showTrack(map, trek.trackfile);
+  showSelectedBaseMap(getSelectedBaseMap());
+  showTrack(trek.trackfile);
 
 };
 
 // -------------------------------------------------------------------------
-const showSelectedBaseMap = (map, basemap) => {
+const getSelectedBaseMap = () => {
 
-  console.log('showSelectedBaseMap() called');
-  clearLayers(map);
+  let val = 'otm';
+
+  // --- FIXME -----------------------------------------------------------
+  // Please note that 'mapLayerChooser' cannot be placed in base.js
+  // because it does not exist in document until the renderPageHeader()
+  // function is called. For this reason the following simpler line
+  // cannot be used instead of the next two lines:
+  //    const radios = elements.mapLayerChooserForm.elements['basemap'];
+  // This problem can be solved adding for example the section with the
+  // mapLayerChooser into the page HTML and using the display property
+  // 'none' and 'block'
+  const mapform = document.querySelector('.mapLayerChooser');
+  const radios = mapform.elements['basemap'];
+  // ---------------------------------------------------------------------
+
+  for (var i = 0, len = radios.length; i < len; i = i + 1) {
+    if (radios[i].checked === true) {
+      val = radios[i].value;
+      break;
+    }
+  }
+
+  return val;
+};
+
+// -------------------------------------------------------------------------
+const showSelectedBaseMap = (basemap) => {
+
+  clearLayers();
 
   switch (basemap) {
     case 'fum':
       // 4Umaps
-      map.addLayer(forYouMapsLayer());
+      theMap.addLayer(forYouMapsLayer());
       break;
     case 'otm':
       // Open topo map
-      map.addLayer(openTopoMapLayer());
+      theMap.addLayer(openTopoMapLayer());
       break;
     case 'tf':
-        // Thunderforest landscape
-      map.addLayer(thunderForestLandscapeLayer());
+      // Thunderforest landscape
+      theMap.addLayer(thunderForestLandscapeLayer());
       break;
     case 'mb':
       // Mapbox
-      map.addLayer(mapBoxLayer());
+      theMap.addLayer(mapBoxLayer());
       break;
     default:
       // impossible... Uses Mapbox
-      map.addLayer(mapBoxLayer());
+      theMap.addLayer(mapBoxLayer());
       break;
   }
 };
 
 // -------------------------------------------------------------------------
-const clearLayers = (map) => {
-  console.log('clearLayers() called');
-  map.eachLayer(layer => {
-    console.log(`    - layer = ${layer}`);
-    map.removeLayer(layer);
+const clearLayers = () => {
+  theMap.eachLayer(layer => {
+    theMap.removeLayer(layer);
   });
 };
 
@@ -128,7 +155,6 @@ const forYouMapsLayer = () => {
 
 // -------------------------------------------------------------------------
 const openTopoMapLayer = () => {
-  console.log('openTopoMapLayer() called');
   return L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     {
       maxZoom: 17,
@@ -162,7 +188,7 @@ const mapBoxLayer = () => {
 };
 
 // -------------------------------------------------------------------------
-const showTrack = (map, tfile) => {
+const showTrack = (tfile) => {
 
   var gpx = `treks/${tfile}`;
   new L.GPX(gpx, {
@@ -180,19 +206,10 @@ const showTrack = (map, tfile) => {
     }
   }).on('loaded', (e) => {
     var gpx = e.target;
-    map.fitBounds(gpx.getBounds());
+    theMap.fitBounds(gpx.getBounds());
 
     //printTrackInfo(gpx);
 
-  }).addTo(map);
-
-
-
-
+  }).addTo(theMap);
 
 };
-
-
-
-
-

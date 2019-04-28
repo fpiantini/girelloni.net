@@ -8,7 +8,11 @@ export const elements = {
   areasList: document.querySelector('.areas__list'),
   treksList: document.querySelector('.treks__list'),
   trekElement: document.querySelector('.trek__element'),
-  mapElement: document.querySelector('.tobecompleted')
+  mapElement: document.querySelector('.tobecompleted'),
+
+  //mapLayerChooserForm: document.querySelector('.mapLayerChooser'),
+  //layerChooserRadios: document.querySelector('.layer-chooser-radios')
+
 };
 
 

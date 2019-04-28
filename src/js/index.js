@@ -58,14 +58,28 @@ function redrawPageBasedOnHash() {
     }
     else {
       const trek = state.treks.getTrekById(strs[1]);
-      console.log(`trackfile = ${trek.trackfile}`)
       if (trek) {
         trekView.renderPageHeader(trek);
         trekView.renderItem(trek);
         trekView.fillMap(trek);
+
+        // --- FIXME -----------------------------------------------------------
+        // Please note that 'layerChooserRadios' cannot be placed in base.js
+        // because it does not exist in document until the renderPageHeader()
+        // function is called. For this reason the following simpler line
+        // cannot be used instead of the next two lines:
+        //    elements.layerChooserRadios.addEventListener(.....
+        // This problem can be solved adding for example the section with the
+        // layerChooserRadios into the page HTML and using the display property
+        // 'none' and 'block'
+        const layerChooserRadios = document.querySelector('.layer-chooser-radios');
+        layerChooserRadios.addEventListener('click', (event) => {
+          if (event.target.type === 'radio') {
+            trekView.refreshMap(trek);
+          }
+        }, false);
       }
     }
-
   }
   else {
 
