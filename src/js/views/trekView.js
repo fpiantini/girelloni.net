@@ -1,5 +1,6 @@
 import { elements } from './base';
 import * as lf from 'leaflet';
+import * as lgpx from 'leaflet-gpx';
 import  { tfKey, mpKey }  from '../config'
 
 var L = require('leaflet');
@@ -49,35 +50,38 @@ export const clear = () => {
 };
 
 // -------------------------------------------------------------------------
-export const fillMap = (item) => {
+export const fillMap = (trek) => {
 
-  console.log('fillMap() called');
+  console.log(`fillMap() called for trek = ${trek.trackfile}`);
   var mymap = new L.map('mapid');
+  //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
   mymap.scrollWheelZoom.disable();
 
-  redrawMap(mymap);
+  redrawMap(mymap, trek);
 
 };
 
 // -------------------------------------------------------------------------
-const redrawMap = (map) => {
+const redrawMap = (map, trek) => {
 
-  console.log('redrawMap() called');
-  showLayers(map);
+  console.log(`redrawMap() called for trek = ${trek.trackfile}`);
+  showLayers(map, trek);
 
 };
 
 // -------------------------------------------------------------------------
-const showLayers = (map) => {
+const showLayers = (map, trek) => {
 
   console.log('showLayers() called');
   showSelectedBaseMap(map, 'otm');
-  //showTrack(lf.L, map, track);
+  showTrack(map, trek.trackfile);
 
 };
 
 // -------------------------------------------------------------------------
 const showSelectedBaseMap = (map, basemap) => {
+
+  console.log('showSelectedBaseMap() called');
   clearLayers(map);
 
   switch (basemap) {
@@ -106,7 +110,9 @@ const showSelectedBaseMap = (map, basemap) => {
 
 // -------------------------------------------------------------------------
 const clearLayers = (map) => {
+  console.log('clearLayers() called');
   map.eachLayer(layer => {
+    console.log(`    - layer = ${layer}`);
     map.removeLayer(layer);
   });
 };
@@ -122,6 +128,7 @@ const forYouMapsLayer = () => {
 
 // -------------------------------------------------------------------------
 const openTopoMapLayer = () => {
+  console.log('openTopoMapLayer() called');
   return L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     {
       maxZoom: 17,
@@ -154,6 +161,36 @@ const mapBoxLayer = () => {
     });
 };
 
+// -------------------------------------------------------------------------
+const showTrack = (map, tfile) => {
+
+  var gpx = `treks/${tfile}`;
+  new L.GPX(gpx, {
+    async: true,
+    //marker_options: {
+    //  startIconUrl: 'pin-icon-start.png',
+    //  endIconUrl: 'pin-icon-end.png',
+    //  shadowUrl: 'pin-shadow.png'
+    //},
+    polyline_options: {
+      color: 'darkred',
+      opacity: 0.75,
+      weight: 3,
+      lineCap: 'round'
+    }
+  }).on('loaded', (e) => {
+    var gpx = e.target;
+    map.fitBounds(gpx.getBounds());
+
+    //printTrackInfo(gpx);
+
+  }).addTo(map);
+
+
+
+
+
+};
 
 
 

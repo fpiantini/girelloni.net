@@ -58,6 +58,7 @@ function redrawPageBasedOnHash() {
     }
     else {
       const trek = state.treks.getTrekById(strs[1]);
+      console.log(`trackfile = ${trek.trackfile}`)
       if (trek) {
         trekView.renderPageHeader(trek);
         trekView.renderItem(trek);
