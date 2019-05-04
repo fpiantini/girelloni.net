@@ -25,7 +25,7 @@ export const renderPageHeader = (item) => {
       <fieldset class="mapLayerChooser">
         <legend class="mapLayerChooser">Tipo di mappa base</legend>
 
-        <p class="layer-chooser-radios" id="layer-chooser-radios">
+        <p class="layer-chooser-radios normalnomargin" id="layer-chooser-radios">
           <label><input type="radio" name="basemap" value="otm" checked="checked" /> OpenTopoMap</label>
           <label><input type="radio" name="basemap" value="fum" /> 4UMaps</label>
           <label><input type="radio" name="basemap" value="tf" /> ThunderForest Landscape</label>
@@ -215,17 +215,17 @@ const printTrackInfo = (trek, gpxdata) => {
         Informazioni sul percorso
       </p>
       <p class="normal hidden" id = "md_starttime">Orario di inizio: ${gpxdata.get_start_time()}</p>
-      <p class="normal hidden" id = "md_endtime">Orario di fine: ${gpxdata.get_end_time()}</p>
-      <p class="normal" id = "md_totdistance">Distanza totale: ${distanceToString(gpxdata.get_distance(), true)}</p>
-      <p class="normal hidden" id = "md_movingtime">Tempo in movimento: ${deltaTimeInSecondsToString(gpxdata.get_moving_time() / 1000)}</p>
-      <p class="normal" id = "md_totaltime">Tempo totale: ${deltaTimeInSecondsToString(gpxdata.get_total_time() / 1000)}</p>
-      <p class="normal hidden" id = "md_movingpace">Ritmo medio in movimento: ${gpxdata.get_moving_pace()}</p>
-      <p class="normal hidden" id = "md_movingspeed">Velocità media in movimento: ${gpxdata.get_moving_speed().toFixed(2)}</p>
-      <p class="normal" id = "md_totalspeed">Velocità media: ${gpxdata.get_total_speed().toFixed(2)} Km/h</p>
-      <p class="normal" id = "md_elevmin">Elevazione minima: ${distanceToString(gpxdata.get_elevation_min(), false)}</p>
-      <p class="normal" id = "md_elevmax">Elevazione massima: ${distanceToString(gpxdata.get_elevation_max(), false)}</p>
-      <p class="normal" id = "md_elevgain">Dislivello in salita: ${distanceToString(gpxdata.get_elevation_gain(), false)}</p>
-      <p class="normal" id = "md_elevloss">Dislivello in discesa: ${distanceToString(gpxdata.get_elevation_loss(), false)}</p>
+      <p class="normalnomargin hidden" id = "md_endtime">Orario di fine: ${gpxdata.get_end_time()}</p>
+      <p class="normalnomargin" id = "md_totdistance">Distanza totale: ${distanceToString(gpxdata.get_distance(), true)}</p>
+      <p class="normalnomargin hidden" id = "md_movingtime">Tempo in movimento: ${deltaTimeInSecondsToString(gpxdata.get_moving_time() / 1000)}</p>
+      <p class="normalnomargin" id = "md_totaltime">Tempo totale: ${deltaTimeInSecondsToString(gpxdata.get_total_time() / 1000)}</p>
+      <p class="normalnomargin hidden" id = "md_movingpace">Ritmo medio in movimento: ${gpxdata.get_moving_pace()}</p>
+      <p class="normalnomargin hidden" id = "md_movingspeed">Velocità media in movimento: ${gpxdata.get_moving_speed().toFixed(2)}</p>
+      <p class="normalnomargin" id = "md_totalspeed">Velocità media: ${gpxdata.get_total_speed().toFixed(2)} Km/h</p>
+      <p class="normalnomargin" id = "md_elevmin">Elevazione minima: ${distanceToString(gpxdata.get_elevation_min(), false)}</p>
+      <p class="normalnomargin" id = "md_elevmax">Elevazione massima: ${distanceToString(gpxdata.get_elevation_max(), false)}</p>
+      <p class="normalnomargin" id = "md_elevgain">Dislivello in salita: ${distanceToString(gpxdata.get_elevation_gain(), false)}</p>
+      <p class="normalmarginbottom" id = "md_elevloss">Dislivello in discesa: ${distanceToString(gpxdata.get_elevation_loss(), false)}</p>
     </div>
   `;
   elements.trekElement.insertAdjacentHTML('beforeend', markup);

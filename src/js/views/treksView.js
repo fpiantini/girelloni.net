@@ -14,8 +14,9 @@ export const renderPageHeader = (areaName) => {
 };
 
 export const renderItem = (item, cssClass) => {
+  //<div class="${cssClass}" id="${item.id}">
   const markup = `
-    <div class="${cssClass}" id="${item.id}">
+  <div class="${cssClass}" id="archive">
       <p class="trek_button inevidence"><a href="#trek__${item.id}">${item.title}</a></p>
     </div>
   `;
