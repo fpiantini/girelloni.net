@@ -285,8 +285,6 @@ const deltaTimeInSecondsToString = (deltat) => {
   let retStr = '';
   let h = 0, m = 0, s = 0;
 
-  console.log(`deltat = ${deltat}, numero ore = ${Math.floor(deltat/3600)}`);
-
   if (deltat >= 3600) {
     h = Math.floor(deltat/3600);
     deltat = deltat % 3600;
