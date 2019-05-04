@@ -28,6 +28,8 @@ export const renderPageHeader = (item) => {
         <p class="layer-chooser-radios normalnomargin" id="layer-chooser-radios">
           <label><input type="radio" name="basemap" value="otm" checked="checked" /> OpenTopoMap</label>
           <label><input type="radio" name="basemap" value="fum" /> 4UMaps</label>
+          <label><input type="radio" name="basemap" value="hbm" /> Hike & Bike map</label>
+          <label><input type="radio" name="basemap" value="osm" /> OpenStreet map</label>
           <label><input type="radio" name="basemap" value="tf" /> ThunderForest Landscape</label>
           <label><input type="radio" name="basemap" value="mb" /> MapBox</label>
         </p>
@@ -104,6 +106,9 @@ const showSelectedBaseMap = (basemap) => {
 
   clearLayers();
 
+  // TO ADD NEW BASEMAP: refer to:
+  // https://leaflet-extras.github.io/leaflet-providers/preview/
+
   switch (basemap) {
     case 'fum':
       // 4Umaps
@@ -112,6 +117,14 @@ const showSelectedBaseMap = (basemap) => {
     case 'otm':
       // Open topo map
       theMap.addLayer(openTopoMapLayer());
+      break;
+    case 'hbm':
+      // Hike & Bike map
+      theMap.addLayer(HikeBikeLayer());
+      break;
+    case 'osm':
+      // OpenStreet map
+      theMap.addLayer(OpenStreetMapLayer());
       break;
     case 'tf':
       // Thunderforest landscape
@@ -154,6 +167,22 @@ const openTopoMapLayer = () => {
 };
 
 // -------------------------------------------------------------------------
+const HikeBikeLayer = () => {
+
+    return new L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+};
+
+// -------------------------------------------------------------------------
+const OpenStreetMapLayer = () => {
+
+  return new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  });
+};
 const thunderForestLandscapeLayer = () => {
   return L.tileLayer('https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey={apikey}',  {
     attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -166,7 +195,6 @@ const thunderForestLandscapeLayer = () => {
 const mapBoxLayer = () => {
 
   const mpUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mpKey;
-
   const mpAttrib = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>';
@@ -176,7 +204,7 @@ const mapBoxLayer = () => {
       attribution: mpAttrib,
       id: 'mapbox.streets'
     });
-};
+}
 
 // -------------------------------------------------------------------------
 const showTrack = (trek) => {
