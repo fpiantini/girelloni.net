@@ -60,7 +60,6 @@ function redrawPageBasedOnHash() {
       const trek = state.treks.getTrekById(strs[1]);
       if (trek) {
         trekView.renderPageHeader(trek);
-        trekView.renderItem(trek);
         trekView.fillMap(trek);
 
         // --- FIXME -----------------------------------------------------------

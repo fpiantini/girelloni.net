@@ -7,12 +7,17 @@ var L = require('leaflet');
 var theMap;
 
 // -------------------------------------------------------------------------
+export const clear = () => {
+  elements.trekElement.innerHTML = '';
+};
+
+// -------------------------------------------------------------------------
 export const renderPageHeader = (item) => {
 
   const markup = `
 
     <div class="divdark" id="mapbox">
-      <div class="divmap" id="mapid" style="height: 610px; width:100%"></div>
+      <div class="divmap" id="mapid" style="height: 810px; width:100%"></div>
       <p class='inevidence'>${item.title}</p>
     </div>
     <div class="divlight" id="mapbox">
@@ -36,27 +41,13 @@ export const renderPageHeader = (item) => {
 
 };
 
-// -------------------------------------------------------------------------
-export const renderItem = (item) => {
-  
-  const markup = `
-    <div id="${item.id}__details">
-      <p class="trek_details">TO BE COMPLETED. Trek ID = ${item.id}</p>
-    </div>
-  `;
-  elements.trekElement.insertAdjacentHTML('beforeend', markup);
-};
-
-// -------------------------------------------------------------------------
-export const clear = () => {
-  elements.trekElement.innerHTML = '';
-};
 
 // -------------------------------------------------------------------------
 export const fillMap = (trek) => {
 
-  theMap.scrollWheelZoom.disable();
-
+  // Uncomment the next line to disable the zoom on map when
+  // when scrolling with mouse wheel
+  //theMap.scrollWheelZoom.disable();
   redrawMap(trek);
 
 };
@@ -76,7 +67,7 @@ const redrawMap = (trek) => {
 const showLayers = (trek) => {
 
   showSelectedBaseMap(getSelectedBaseMap());
-  showTrack(trek.trackfile);
+  showTrack(trek);
 
 };
 
@@ -188,10 +179,10 @@ const mapBoxLayer = () => {
 };
 
 // -------------------------------------------------------------------------
-const showTrack = (tfile) => {
+const showTrack = (trek) => {
 
-  var gpx = `treks/${tfile}`;
-  new L.GPX(gpx, {
+  const gpxfile = `treks/${trek.trackfile}`;
+  new L.GPX(gpxfile, {
     async: true,
     //marker_options: {
     //  startIconUrl: 'pin-icon-start.png',
@@ -205,11 +196,113 @@ const showTrack = (tfile) => {
       lineCap: 'round'
     }
   }).on('loaded', (e) => {
-    var gpx = e.target;
-    theMap.fitBounds(gpx.getBounds());
+    var gpxdata = e.target;
+    theMap.fitBounds(gpxdata.getBounds());
 
-    //printTrackInfo(gpx);
+    printTrackInfo(trek, gpxdata);
 
   }).addTo(theMap);
 
 };
+
+// -------------------------------------------------------------------------
+const printTrackInfo = (trek, gpxdata) => {
+  
+  const markup = `
+    <div id="${trek.id}__details" class="divdark">
+      <p class="inevidence">
+        Informazioni sul percorso
+      </p>
+      <p class="normal hidden" id = "md_starttime">Orario di inizio: ${gpxdata.get_start_time()}</p>
+      <p class="normal hidden" id = "md_endtime">Orario di fine: ${gpxdata.get_end_time()}</p>
+      <p class="normal" id = "md_totdistance">Distanza totale: ${distanceToString(gpxdata.get_distance(), true)}</p>
+      <p class="normal hidden" id = "md_movingtime">Tempo in movimento: ${deltaTimeInSecondsToString(gpxdata.get_moving_time() / 1000)}</p>
+      <p class="normal" id = "md_totaltime">Tempo totale: ${deltaTimeInSecondsToString(gpxdata.get_total_time() / 1000)}</p>
+      <p class="normal hidden" id = "md_movingpace">Ritmo medio in movimento: ${gpxdata.get_moving_pace()}</p>
+      <p class="normal hidden" id = "md_movingspeed">Velocità media in movimento: ${gpxdata.get_moving_speed().toFixed(2)}</p>
+      <p class="normal" id = "md_totalspeed">Velocità media: ${gpxdata.get_total_speed().toFixed(2)} Km/h</p>
+      <p class="normal" id = "md_elevmin">Elevazione minima: ${distanceToString(gpxdata.get_elevation_min(), false)}</p>
+      <p class="normal" id = "md_elevmax">Elevazione massima: ${distanceToString(gpxdata.get_elevation_max(), false)}</p>
+      <p class="normal" id = "md_elevgain">Dislivello in salita: ${distanceToString(gpxdata.get_elevation_gain(), false)}</p>
+      <p class="normal" id = "md_elevloss">Dislivello in discesa: ${distanceToString(gpxdata.get_elevation_loss(), false)}</p>
+    </div>
+  `;
+  elements.trekElement.insertAdjacentHTML('beforeend', markup);
+};
+
+// -------------------------------------------------------------------------
+const distanceToString = (dist, useKm) => {
+    var retStr, n_km, n_m;
+
+    // distance is in meters
+    if (useKm) {
+      n_km = Math.floor(dist / 1000);
+      n_m = Math.round(dist % 1000);
+      if (n_km > 0) {
+        retStr = n_km + ' Km ' + n_m + 'm';
+      } else {
+        retStr = n_m + ' m';
+      }
+    } else {
+      retStr = Math.round(dist) + ' m';
+    }
+    return retStr;
+  
+  };
+
+// -------------------------------------------------------------------------
+const deltaTimeInSecondsToString = (deltat) => {
+
+  let retStr = '';
+  let h = 0, m = 0, s = 0;
+
+  console.log(`deltat = ${deltat}, numero ore = ${Math.floor(deltat/3600)}`);
+
+  if (deltat >= 3600) {
+    h = Math.floor(deltat/3600);
+    deltat = deltat % 3600;
+  }
+
+  if (deltat >= 60) {
+    m = Math.floor(deltat/60);
+    deltat = deltat % 60;
+  }
+
+  s = deltat;
+
+  if (h > 1) {
+    retStr += `${h} ore`
+  }
+  else if (h == 1) {
+    retStr += `${h} ora`
+  }
+
+  if (m > 1) {
+    if (retStr.length > 0) {
+      retStr += ', ';
+    }
+    retStr += `${m} minuti`;
+  }
+  else if (m == 1) {
+    if (retStr.length > 0) {
+      retStr += ', ';
+    }
+    retStr += `${m} minuto`;
+  }
+
+  if (s > 1) {
+    if (retStr.length > 0) {
+      retStr += ', ';
+    }
+    retStr += `${s} secondi`;
+  }
+  else if (s == 1) {
+    if (retStr.length > 0) {
+      retStr += ', ';
+    }
+    retStr += `${s} secondo`;
+  }
+
+  return retStr;
+};
+
