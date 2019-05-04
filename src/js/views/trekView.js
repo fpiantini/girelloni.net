@@ -17,7 +17,7 @@ export const renderPageHeader = (item) => {
   const markup = `
 
     <div class="divdark" id="mapbox">
-      <div class="divmap" id="mapid" style="height: 810px; width:100%"></div>
+      <div class="divmap" id="mapid" style="height: 610px; width:100%"></div>
       <p class='inevidence'>${item.title}</p>
     </div>
     <div class="divlight" id="mapbox">
@@ -208,6 +208,7 @@ const showTrack = (trek) => {
 // -------------------------------------------------------------------------
 const printTrackInfo = (trek, gpxdata) => {
   
+  elements.trekElement.innerHTML = '';
   const markup = `
     <div id="${trek.id}__details" class="divdark">
       <p class="inevidence">
