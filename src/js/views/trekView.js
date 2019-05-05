@@ -21,22 +21,23 @@ export const renderPageHeader = (item) => {
       <p class='inevidence'>${item.title}</p>
     </div>
     <div class="divlight" id="mapbox">
-    <form action="#" method="post" class="mapLayerChooser" id="mapLayerChooserForm">
-      <fieldset class="mapLayerChooser">
-        <legend class="mapLayerChooser">Tipo di mappa base</legend>
+      <form action="#" method="post" class="mapLayerChooser" id="mapLayerChooserForm">
+        <fieldset class="mapLayerChooser">
+          <legend class="mapLayerChooser">Tipo di mappa base</legend>
 
-        <p class="layer-chooser-radios normalnomargin" id="layer-chooser-radios">
-          <label><input type="radio" name="basemap" value="otm" checked="checked" /> OpenTopoMap</label>
-          <label><input type="radio" name="basemap" value="fum" /> 4UMaps</label>
-          <label><input type="radio" name="basemap" value="hbm" /> Hike & Bike map</label>
-          <label><input type="radio" name="basemap" value="osm" /> OpenStreet map</label>
-          <label><input type="radio" name="basemap" value="tf" /> ThunderForest Landscape</label>
-          <label><input type="radio" name="basemap" value="mb" /> MapBox</label>
-        </p>
-      </fieldset>
-    </form>
-  </div>
-`;
+          <p class="layer-chooser-radios normalnomargin" id="layer-chooser-radios">
+            <label><input type="radio" name="basemap" value="otm" checked="checked" /> OpenTopoMap</label>
+            <label><input type="radio" name="basemap" value="fum" /> 4UMaps</label>
+            <label><input type="radio" name="basemap" value="hbm" /> Hike&BikeMap</label>
+            <label><input type="radio" name="basemap" value="osm" /> OpenStreetMap</label>
+            <label><input type="radio" name="basemap" value="tf" /> ThunderForestLandscape</label>
+            <label><input type="radio" name="basemap" value="mb" /> MapBox</label>
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  `;
+
   elements.mainPageHeader.insertAdjacentHTML('beforeend', markup);
   
   theMap = new L.map('mapid');
