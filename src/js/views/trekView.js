@@ -6,13 +6,28 @@ import { elements } from './base';
 // -------------------------------------------------------------------------
 export const clear = () => {
   elements.trekData.innerHTML = '';
+  elements.mapElement.innerHTML = '';
+  elements.altitudeGraph.innerHTML = '';
+
 };
 
 // -------------------------------------------------------------------------
 export const preparePage = (tId, tTitle) => {
 
-  elements.mapBox.classList.remove('hidden');
-  elements.altitudeGraph.classList.remove('hidden');
+  const markupMap = `
+    <div class="divdark" id="mapbox">
+      <div class="divmap" id="mapid" style="height: 610px; width:100%"></div>
+      <p class='inevidence' id='mapTitle'>${tTitle}</p>
+    </div>
+  `;
+  elements.mapElement.insertAdjacentHTML('beforeend', markupMap);
+
+  const markupGraph = `
+    <div class="divdark" id="altitudegraph">
+      <canvas id="altitudegraphcanvas" style="height: 400px; width:100%"></canvas>
+    </div>
+  `;
+  elements.altitudeGraph.insertAdjacentHTML('beforeend', markupGraph);
 
 };
 

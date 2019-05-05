@@ -29,11 +29,11 @@ state.treks = new Treks();
 
 // -----------------------------------------------------
 window.addEventListener('load', () => {
-  redrawPageBasedOnHash()
+  redrawPageBasedOnHash();
 });
 
 window.addEventListener('hashchange', () => {
-  redrawPageBasedOnHash()
+  redrawPageBasedOnHash();
 });
 
 // -----------------------------------------------------
@@ -41,8 +41,6 @@ function redrawPageBasedOnHash() {
 
   const id = window.location.hash.replace('#', '');
 
-  elements.mapBox.classList.add('hidden');
-  elements.altitudeGraph.classList.add('hidden');
   areasView.clear();
   treksView.clear();
   trekView.clear();
@@ -92,7 +90,7 @@ function redrawTrekPage(trek) {
 
   trekView.preparePage(trek.id, trek.title);
 
-  state.map = new MapWidget('mapid');
+  let map = new MapWidget('mapid');
 
   // add the track and display additional info
   // when it is loaded
@@ -113,38 +111,69 @@ function redrawTrekPage(trek) {
   }).on('loaded', (ev) => {
 
     const gpxData = ev.target;
-    state.map.fitBounds(gpxData.getBounds());
+    map.fitBounds(gpxData.getBounds());
   
     trekView.printTrackInfo(trek, gpxData)
   
-    console.log(gpxData.get_elevation_data()[0]);
-    plotAltitudeGraph(gpxData);
+    plotAltitudeGraph(gpxData.get_elevation_data(), document.querySelector('#altitudegraphcanvas'));
 
   })
-  .addTo(state.map.getMap());
+  .addTo(map.getMap());
 
 }
 
 // -----------------------------------------------------
-function plotAltitudeGraph(gpxData) {
-  var ctx = elements.altitudeGraphCanvas.getContext('2d');
+function plotAltitudeGraph(eleData, el) {
+  var ctx = el.getContext('2d');
   var myChart = new g.Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: extractDistancesFromGpxData(eleData),
         datasets: [{
-            label: 'Altitude',
-            data: [12, 19, 3, 5, 2, 3]
+          label: 'Altitudine',
+          backgroundColor: "#0a5f0a",
+          data: extractAltitudesFromGpxData(eleData)
         }]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+      legend: {
+        labels: {
+            fontColor: "#fdf6e3",
         }
+      },
+      scales: {
+        xAxes: [{
+          ticks: {
+            fontColor: "#fdf6e3",
+            maxTicksLimit: 20,
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            fontColor: "#fdf6e3",
+          }
+        }]
+      }
     }
   });
+}
+
+// -----------------------------------------------------
+function extractDistancesFromGpxData(eleData) {
+
+  var distances = [];
+  for (var i = 0; i < eleData.length; i++) {
+     distances.push(eleData[i][0].toFixed(3));
+  }
+  return distances;
+
+}
+
+// -----------------------------------------------------
+function extractAltitudesFromGpxData(eleData) {
+  var altitudes = [];
+  for (var i = 0; i < eleData.length; i++) {
+    altitudes.push(eleData[i][1].toFixed(0));
+  }
+  return altitudes;
 }

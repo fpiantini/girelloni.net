@@ -10,9 +10,7 @@ export const elements = {
   mapElement: document.querySelector('.map__element'),
   trekData: document.querySelector('.trek__data'),
 
-  mapBox: document.querySelector('#mapbox'),
-  altitudeGraph: document.querySelector('#altitudegraph'),
-  altitudeGraphCanvas: document.querySelector('#altitudegraphcanvas')
+  altitudeGraph: document.querySelector('.altitude_graph'),
 
 };
 
