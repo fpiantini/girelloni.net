@@ -66,33 +66,40 @@
       -->
     </div>
 
-    <div class="trek__element">
+    <div class="map__element">
 
-      <!-- 1. The map
-      <div class="divdark" id="mapbox">
+      <div class="hidden divdark" id="mapbox">
         <div class="divmap" id="mapid" style="height: 610px; width:100%"></div>
-        <p class='inevidence'>Map title</p>
+        <p class='inevidence'>_titolo_</p>
+      </div>
+      
+    </div>
+
+    <div class="trek__data">
+
+      <!-- The trek detailed data
+      <div id="trek11__details" class="divdark">
+        <p class="inevidence">
+          Informazioni sul percorso
+        </p>
+        <p class="normalnomargin" id = "md_totdistance">Distanza totale: 15 Km 937 m</p>
+        <p class="normalnomargin" id = "md_totaltime">Tempo totale: 8 ore, 25 minuti, 8 secondi</p>
+        <p class="normalnomargin" id = "md_totalspeed">Velocità media: 1.89 Km/h</p>
+        <p class="normalnomargin" id = "md_elevmin">Elevazione minima: 1571 m s.l.m.</p>
+        <p class="normalnomargin" id = "md_elevmax">Elevazione massima: 2915 m s.l.m.</p>
+        <p class="normalnomargin" id = "md_elevgain">Dislivello in salita: 1027 m</p>
+        <p class="normalmarginbottom" id = "md_elevloss">Dislivello in discesa: 2007 m</p>
       </div>
       -->
 
-      <!-- 2. The base map chooser
-      <div class="divlight" id="mapbox">
-        <form action="#" method="post" class="mapLayerChooser" id="mapLayerChooserForm">
-          <fieldset class="mapLayerChooser">
-            <legend class="mapLayerChooser">Tipo di mappa base</legend>
-  
-            <p class="layer-chooser-radios normalnomargin" id="layer-chooser-radios">
-              <label><input type="radio" name="basemap" value="otm" checked="checked" /> OpenTopoMap</label>
-              <label><input type="radio" name="basemap" value="fum" /> 4UMaps</label>
-              <label><input type="radio" name="basemap" value="hbm" /> Hike & Bike map</label>
-              <label><input type="radio" name="basemap" value="osm" /> OpenStreet map</label>
-              <label><input type="radio" name="basemap" value="tf" /> ThunderForest Landscape</label>
-              <label><input type="radio" name="basemap" value="mb" /> MapBox</label>
-            </p>
-          </fieldset>
-        </form>
+    </div>
+
+    <div class="altitude_graph">
+
+      <div class="hidden divdark" id="altitudegraph">
+        <p class='inevidence'>ALTITUDE GRAPH: To be completed --- trek.id = _trackid_</p>
+        <canvas id="altitudegraphcanvas" style="height: 400px; width:100%"></canvas>
       </div>
-      -->
 
     </div>
 

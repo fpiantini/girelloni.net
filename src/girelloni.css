@@ -36,9 +36,10 @@
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;  
-    border-radius: 10px;
     text-align: center;
     font-family: Lato;
+    /* uncomment this is you want to see tiles angles "rounded" */
+    /* border-radius: 10px; */
   }
 
 
@@ -48,6 +49,7 @@ body {
 
 div {
   margin: 0px;
+  border-radius: 10px;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -153,14 +155,12 @@ a {
 }
 
 .divdark a {
-  /* font-variant: small-caps; */
   color: var(--solar-base3-color);
 }
 
 .divmap a {
   font-size: x-small;
   color: black;
-  
 }
 
 .header a  {

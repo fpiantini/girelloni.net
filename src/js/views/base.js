@@ -7,11 +7,12 @@ export const elements = {
   mainPageHeader: document.querySelector('.page__header'),
   areasList: document.querySelector('.areas__list'),
   treksList: document.querySelector('.treks__list'),
-  trekElement: document.querySelector('.trek__element'),
-  mapElement: document.querySelector('.tobecompleted'),
+  mapElement: document.querySelector('.map__element'),
+  trekData: document.querySelector('.trek__data'),
 
-  //mapLayerChooserForm: document.querySelector('.mapLayerChooser'),
-  //layerChooserRadios: document.querySelector('.layer-chooser-radios')
+  mapBox: document.querySelector('#mapbox'),
+  altitudeGraph: document.querySelector('#altitudegraph'),
+  altitudeGraphCanvas: document.querySelector('#altitudegraphcanvas')
 
 };
 
