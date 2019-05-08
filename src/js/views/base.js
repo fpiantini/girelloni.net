@@ -4,6 +4,7 @@ export const elements = {
   mainPageTitle: 'Un sito per chi ama le passeggiate all\'aria aperta',
   mainPageMotto: 'Drogate i vostri figli di natura e di bellezza, perché è la sola dipendenza che li può rendere liberi. (P.C.)',
 
+  titleHeader: document.querySelector('.header'),
   mainPageHeader: document.querySelector('.page__header'),
   areasList: document.querySelector('.areas__list'),
   treksList: document.querySelector('.treks__list'),

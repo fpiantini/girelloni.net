@@ -16,7 +16,7 @@ export const preparePage = (tId, tTitle) => {
 
   const markupMap = `
     <div class="divdark" id="mapbox">
-      <div class="divmap" id="mapid" style="height: 610px; width:100%"></div>
+      <div class="divmap" id="mapid"></div>
       <p class='inevidence' id='mapTitle'>${tTitle}</p>
     </div>
   `;

@@ -142,6 +142,11 @@ a {
   color: var(--solar-base3-color);
 }
 
+#mapid {
+  height: 610px;
+  width:  100%;
+}
+
 .divmap a {
   font-size: x-small;
   color: black;
