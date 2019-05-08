@@ -25,7 +25,6 @@
   --solar-green-color:     #859900;
 }
 
-
 * {
     box-sizing: border-box;
     margin-top: 10px;
@@ -36,18 +35,22 @@
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;  
-    border-radius: 10px;
     text-align: center;
     font-family: Lato;
+    /* uncomment this is you want to see tiles angles "rounded" */
+    /* border-radius: 10px; */
   }
 
 
 body {
   background-color: var(--solar-base03-color);
+  padding: 0;
+  margin: 0;
 }
 
 div {
   margin: 0px;
+  border-radius: 10px;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -83,17 +86,6 @@ div {
   background-color: var(--solar-base3-color);
 }
 
-.divmap {
-  height: 100px;
-  font-size: x-small;
-  margin: 0px;  
-}
-
-#mapid {
-  height: 100px;
-  font-size: x-small;  
-}
-
 .description {
   padding-top: 0.5cm;
   font-size: large;
@@ -102,12 +94,6 @@ div {
 }
 
 .inevidence {
-  font-size: large;
-  font-weight: bold;
-  font-variant: small-caps;
-}
-
-.inevidence-light {
   font-size: large;
   font-weight: bold;
   font-variant: small-caps;
@@ -153,41 +139,18 @@ a {
 }
 
 .divdark a {
-  /* font-variant: small-caps; */
   color: var(--solar-base3-color);
 }
 
 .divmap a {
   font-size: x-small;
   color: black;
-  
 }
 
 .header a  {
   color: var(--solar-orange-color);
   background-color: var(--solar-base2-color);
   font-size: x-large;
-}
-
-.mapLayerChooser {
-  font-weight: bold;
-  margin: 0px;
-  /* the following are necessary to have the legend centered
-  https://stackoverflow.com/questions/23377769/fieldset-center-legend
-  */
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border: 0px
-
-}
-
-/* unvisited link */
-a:link {
-}
-
-/* visited link */
-a:visited {
 }
 
 /* mouse over link */
@@ -198,13 +161,9 @@ a:hover {
   margin-right: 10px;
 }
 
-/* selected link */
-a:active {
-}
-
 .divmap a:hover {
   margin-right: 0;
-  
+
 }
 
 

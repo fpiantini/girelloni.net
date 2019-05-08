@@ -86,19 +86,6 @@ div {
   background-color: var(--solar-base3-color);
 }
 
-/*
-.divmap {
-  height: 100px;
-  font-size: x-small;
-  margin: 0px;  
-}
-
-#mapid {
-  height: 100px;
-  font-size: x-small;  
-}
-*/
-
 .description {
   padding-top: 0.5cm;
   font-size: large;
@@ -107,12 +94,6 @@ div {
 }
 
 .inevidence {
-  font-size: large;
-  font-weight: bold;
-  font-variant: small-caps;
-}
-
-.inevidence-light {
   font-size: large;
   font-weight: bold;
   font-variant: small-caps;
@@ -172,14 +153,6 @@ a {
   font-size: x-large;
 }
 
-/* unvisited link */
-a:link {
-}
-
-/* visited link */
-a:visited {
-}
-
 /* mouse over link */
 a:hover {
   /* text-transform: uppercase; */
@@ -188,13 +161,9 @@ a:hover {
   margin-right: 10px;
 }
 
-/* selected link */
-a:active {
-}
-
 .divmap a:hover {
   margin-right: 0;
-  
+
 }
 
 
