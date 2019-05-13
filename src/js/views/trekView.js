@@ -81,7 +81,7 @@ const distanceToString = (dist, useKm) => {
 const deltaTimeInSecondsToString = (deltat) => {
 
   let retStr = '';
-  let h = 0, m = 0, s = 0;
+  let h = 0, m = 0;
 
   if (deltat >= 3600) {
     h = Math.floor(deltat/3600);
@@ -92,8 +92,6 @@ const deltaTimeInSecondsToString = (deltat) => {
     m = Math.floor(deltat/60);
     deltat = deltat % 60;
   }
-
-  s = deltat;
 
   if (h > 1) {
     retStr += `${h} ore`
@@ -113,19 +111,6 @@ const deltaTimeInSecondsToString = (deltat) => {
       retStr += ', ';
     }
     retStr += `${m} minuto`;
-  }
-
-  if (s > 1) {
-    if (retStr.length > 0) {
-      retStr += ', ';
-    }
-    retStr += `${s} secondi`;
-  }
-  else if (s == 1) {
-    if (retStr.length > 0) {
-      retStr += ', ';
-    }
-    retStr += `${s} secondo`;
   }
 
   return retStr;
