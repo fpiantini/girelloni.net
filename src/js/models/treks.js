@@ -267,6 +267,61 @@ export default class Treks {
                 "area": "Parco Foreste Casentinesi, monte Falterona e Campigna", \
                 "clArea": "Toscana" \
             }',
+            '{  "id": "30", \
+                "title": "Corsetta a Sesto Fiorentino", \
+                "description": "Corsetta a Sesto Fiorentino sulle pendici di Monte Morello", \
+                "trackfile": "20190509_CorsaSesto.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Monte Morello", \
+                "clArea": "Toscana" \
+            }',
+
+            '{  "id": "31", \
+                "title": "Da Querceto al rifugio Gualdo", \
+                "description": "Dalla chiesa di Querceto al Rifugio Gualdo", \
+                "trackfile": "20190511_1_QuercetoGualdo.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Monte Morello", \
+                "clArea": "Toscana" \
+            }',
+            '{  "id": "32", \
+                "title": "Anello del Gualdo", \
+                "description": "Percorso ad anello Gualdo - tre punte del Morello", \
+                "trackfile": "20190511_2_AnelloGualdo.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Monte Morello", \
+                "clArea": "Toscana" \
+            }',
+            '{  "id": "33", \
+                "title": "Collina - Sesto", \
+                "description": "Collina - Sesto", \
+                "trackfile": "20190511_3_CollinaQuercetoViaCappelle.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Monte Morello", \
+                "clArea": "Toscana" \
+            }',
+            '{  "id": "34", \
+                "title": "Via degli Dei 1", \
+                "description": "Via degli Dei tappa 1", \
+                "trackfile": "via_degli_dei_01.gpx", \
+                "nation": "Italia", \
+                "region": "Emilia Romagna", \
+                "area": "Via degli Dei", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "35", \
+                "title": "Via degli Dei 2", \
+                "description": "Via degli Dei tappa 1", \
+                "trackfile": "via_degli_dei_02.gpx", \
+                "nation": "Italia", \
+                "region": "Emilia Romagna", \
+                "area": "Via degli Dei", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];
