@@ -322,6 +322,15 @@ export default class Treks {
                 "area": "Via degli Dei", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "36", \
+                "title": "Foresta del Teso", \
+                "description": "Una passeggiata nella Foresta del Testo, sopra Maresca, Appennino pistoiese", \
+                "trackfile": "20190530_ForestaDelTeso.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Appennino Tosco Emiliano", \
+                "clArea": "Toscana" \
+            }',
         ];
 
         this.treksList = [];
