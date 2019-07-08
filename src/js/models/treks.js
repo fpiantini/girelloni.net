@@ -331,6 +331,24 @@ export default class Treks {
                 "area": "Appennino Tosco Emiliano", \
                 "clArea": "Toscana" \
             }',
+            '{  "id": "37", \
+                "title": "Sotto il Catinaccio", \
+                "description": "Tra i rifugi, sotto il Catinaccio e poi fino al lago di Carezza", \
+                "trackfile": "2019-07-06_0929__20190706_coronelle.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "38", \
+                "title": "Rasciesa e la forcella Pana", \
+                "description": "In val Gardena salendo a Rasciesa, passando dalla forcella Pana e scendendo sotto le Odle", \
+                "trackfile": "2019-07-08_0938__20190708_forcella_pana.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];
