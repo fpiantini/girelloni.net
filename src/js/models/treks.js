@@ -349,6 +349,15 @@ export default class Treks {
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "39", \
+                "title": "Le cinque Torri", \
+                "description": "Le cinque Torri", \
+                "trackfile": "2019-07-09_1016__20190709_cinque_torri.gpx", \
+                "nation": "Italia", \
+                "region": "Veneto", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];
