@@ -358,6 +358,15 @@ export default class Treks {
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "40", \
+                "title": "Salita al rifugio Antermoia", \
+                "description": "Salita la rifugio Antermoia dal Rifugio Micheluzzi e ritorno a Campitello di Fassa", \
+                "trackfile": "2019-07-10_1044__20190710_antermoia.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];
