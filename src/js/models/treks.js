@@ -367,6 +367,51 @@ export default class Treks {
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "41", \
+                "title": "Anello delle dolomiti friulane 1: da Forni di Sopra al Rifugio Giaf", \
+                "description": "Anello delle dolomiti friulane 1: da Forni di Sopra al Rifugio Giaf", \
+                "trackfile": "2019-07-21_1616__20190721_1616_adf1_forni_di_sopra_rifugio_giaf.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "42", \
+                "title": "Anello delle dolomiti friulane 2: dal rifugio Giaf al rifugio Pordenone", \
+                "description": "Anello delle dolomiti friulane 2: dal rifugio Giaf al rifugio Pordenone", \
+                "trackfile": "2019-07-22_0805__20190722_0805_adf2_rifugio_giaf_rifugio_pordenone.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "43", \
+                "title": "Anello delle dolomiti friulane 3: dal rifugio Pordenone al rifugio Padova", \
+                "description": "Anello delle dolomiti friulane 3: dal rifugio Pordenone al rifugio Padova", \
+                "trackfile": "2019-07-23_0818__20190723_0818_adf3_rifugio_pordenone_rifugio_padova.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "44", \
+                "title": "Anello delle dolomiti friulane 4: dal rifugio Padova al rifugio Giaf", \
+                "description": "Anello delle dolomiti friulane 4: dal rifugio Padova al rifugio Giaf", \
+                "trackfile": "2019-07-24_0831__20190724_0831_adf4_rifugio_padova_rifugio_giaf.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "45", \
+                "title": "Anello delle dololiti friulane", \
+                "description": "Anello delle dolomiti friulane", \
+                "trackfile": "2019-07_anello_delle_dolomiti_friulane.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="OruxMaps v.7.3.7" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<name><![CDATA[2019-07-21 16:16]]></name>
+<link href="https://www.oruxmaps.com">
+<text>OruxMaps</text>
+</link>
+<time>2019-07-21T14:16:25Z</time><bounds maxlat="46.4275397" maxlon="12.5384243" minlat="46.4236360" minlon="12.5197328"/>
+</metadata>
+<trk>
+<name><![CDATA[2019-07-21 16:16]]></name>
+<desc><![CDATA[<p>Orario inizio: 07/21/2019 16:16<br/>Orario fine: 07/21/2019 20:29<br/>Distanza: 2,3 km (04:12)<br/>Tempo movimento: 00:54<br/>Velocità media: 0,54 km/h<br/>Velocità media mov.: 2,5 km/h<br/>Max. Velocità: 8,61 km/h<br/>Altitudine minima: 1076 m<br/>Altitudine massima: 1437 m<br/>Velocità di salita: 373,1 m/h<br/>Velocità di discesa: -6,7 m/h<br/>Dislivello positivo: 309 m<br/>Dislivello negativo: -22 m<br/>Tempo di salita: 00:49<br/>Tempo di discesa: 03:23<br/></p><hr align="center" width="480" style="height: 2px; width: 517px"/>]]></desc>
+<type>Non definito</type>
+<extensions>
+<om:oruxmapsextensions xmlns:om="http://www.oruxmaps.com/oruxmapsextensions/1/0">
+<om:ext type="TYPE" subtype="0">0</om:ext>
+<om:ext type="DIFFICULTY">0</om:ext>
+</om:oruxmapsextensions>
+</extensions>
+<trkseg>
+<trkpt lat="46.4275397" lon="12.5384243">
+<ele>1076.42</ele>
+<time>2019-07-21T14:16:27Z</time>
+</trkpt>
+<trkpt lat="46.4263905" lon="12.5332633">
+<ele>1106.42</ele>
+<time>2019-07-21T14:25:02Z</time>
+</trkpt>
+<trkpt lat="46.4263324" lon="12.5330137">
+<ele>1139.01</ele>
+<time>2019-07-21T14:25:30Z</time>
+</trkpt>
+<trkpt lat="46.4264269" lon="12.5312006">
+<ele>1160.48</ele>
+<time>2019-07-21T14:28:24Z</time>
+</trkpt>
+<trkpt lat="46.4262482" lon="12.5311502">
+<ele>1176.79</ele>
+<time>2019-07-21T14:28:31Z</time>
+</trkpt>
+<trkpt lat="46.4260625" lon="12.5310492">
+<ele>1190.39</ele>
+<time>2019-07-21T14:29:57Z</time>
+</trkpt>
+<trkpt lat="46.4259443" lon="12.5308496">
+<ele>1179.25</ele>
+<time>2019-07-21T14:30:08Z</time>
+</trkpt>
+<trkpt lat="46.4252068" lon="12.5300512">
+<ele>1146.11</ele>
+<time>2019-07-21T14:31:31Z</time>
+</trkpt>
+<trkpt lat="46.4253665" lon="12.5302398">
+<ele>1176.34</ele>
+<time>2019-07-21T14:31:35Z</time>
+</trkpt>
+<trkpt lat="46.4253394" lon="12.5296306">
+<ele>1196.32</ele>
+<time>2019-07-21T14:33:00Z</time>
+</trkpt>
+<trkpt lat="46.4250885" lon="12.5289138">
+<ele>1189.66</ele>
+<time>2019-07-21T14:34:16Z</time>
+</trkpt>
+<trkpt lat="46.4251101" lon="12.5286414">
+<ele>1224.01</ele>
+<time>2019-07-21T14:34:56Z</time>
+</trkpt>
+<trkpt lat="46.4253173" lon="12.5283578">
+<ele>1234.25</ele>
+<time>2019-07-21T14:35:41Z</time>
+</trkpt>
+<trkpt lat="46.4251566" lon="12.5282071">
+<ele>1235.10</ele>
+<time>2019-07-21T14:35:46Z</time>
+</trkpt>
+<trkpt lat="46.4245562" lon="12.5269353">
+<ele>1222.25</ele>
+<time>2019-07-21T14:40:48Z</time>
+</trkpt>
+<trkpt lat="46.4242733" lon="12.5262444">
+<ele>1231.02</ele>
+<time>2019-07-21T14:42:13Z</time>
+</trkpt>
+<trkpt lat="46.4244324" lon="12.5261159">
+<ele>1257.39</ele>
+<time>2019-07-21T14:42:31Z</time>
+</trkpt>
+<trkpt lat="46.4246169" lon="12.5256828">
+<ele>1220.45</ele>
+<time>2019-07-21T14:44:29Z</time>
+</trkpt>
+<trkpt lat="46.4246621" lon="12.5252253">
+<ele>1250.45</ele>
+<time>2019-07-21T14:46:53Z</time>
+</trkpt>
+<trkpt lat="46.4246769" lon="12.5249651">
+<ele>1281.44</ele>
+<time>2019-07-21T14:47:48Z</time>
+</trkpt>
+<trkpt lat="46.4250390" lon="12.5247628">
+<ele>1344.64</ele>
+<time>2019-07-21T14:52:09Z</time>
+</trkpt>
+<trkpt lat="46.4249149" lon="12.5245326">
+<ele>1328.56</ele>
+<time>2019-07-21T14:53:28Z</time>
+</trkpt>
+<trkpt lat="46.4244756" lon="12.5222375">
+<ele>1357.08</ele>
+<time>2019-07-21T14:59:42Z</time>
+</trkpt>
+<trkpt lat="46.4244931" lon="12.5219323">
+<ele>1391.00</ele>
+<time>2019-07-21T15:00:32Z</time>
+</trkpt>
+<trkpt lat="46.4236424" lon="12.5199931">
+<ele>1399.79</ele>
+<time>2019-07-21T15:07:37Z</time>
+</trkpt>
+<trkpt lat="46.4238020" lon="12.5197328">
+<ele>1398.06</ele>
+<time>2019-07-21T15:48:51Z</time>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>
