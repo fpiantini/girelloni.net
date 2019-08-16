@@ -13,22 +13,27 @@ export default class MapWidget {
     this.osmLayer = this.OpenStreetMapLayer();
     this.tfLayer  = this.thunderForestLandscapeLayer();
     this.mbLayer  = this.mapBoxLayer();
+    this.wmtLayer = this.waymarkedTrailsLayer();
   
     // define the Map object
     this.gMap = new lf.map(mapid, {
-      layers: [this.otmLayer]
+      layers: [ this.otmLayer ]
     });
 
     this.baseMaps = {
-      "OpenTopoMap": this.otmLayer,
-      "4YouMap": this.fumLayer,
-      "Hike&BikeMap": this.hbLayer,
-      "OpenStreetMap": this.osmLayer,
-      "ThunderForest": this.tfLayer,
-      "MapBox": this.mbLayer
+      "OpenTopoMap":      this.otmLayer,
+      "4YouMap":          this.fumLayer,
+      "Hike&BikeMap":     this.hbLayer,
+      "OpenStreetMap":    this.osmLayer,
+      "ThunderForest":    this.tfLayer,
+      "MapBox":           this.mbLayer,
     };
   
-    lf.control.layers(this.baseMaps).addTo(this.gMap);
+    this.overlaysMaps = {
+      "WayMarkedTrails":  this.wmtLayer
+    };
+
+    lf.control.layers(this.baseMaps, this.overlaysMaps).addTo(this.gMap);
   
   }
 
@@ -46,7 +51,6 @@ export default class MapWidget {
   getGpxData() {
     return this.gpxData;
   }  
-
 
   // -------------------------------------------------------------------------
   forYouMapsLayer() {
@@ -106,7 +110,15 @@ export default class MapWidget {
         attribution: mpAttrib,
         id: 'mapbox.streets'
       });
-  }
+  };
 
+  // -------------------------------------------------------------------------
+  waymarkedTrailsLayer() {
+    return lf.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
+      {
+        maxZoom: 17,
+        attribution: 'Map data: <a href="https://hiking.waymarkedtrails.org/">WaymarkedTrails hiking</a>'
+    });
+  };
 
 }
