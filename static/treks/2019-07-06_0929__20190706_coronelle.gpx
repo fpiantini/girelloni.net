@@ -8,31 +8,6 @@
 </link>
 <time>2019-07-06T07:29:53Z</time><bounds maxlat="46.4427985" maxlon="11.6320561" minlat="46.4080485" minlon="11.5750091"/>
 </metadata>
-<wpt lat="46.4157535" lon="11.6147114">
-<ele>2125.78</ele>
-<time>2019-07-06T07:29:53Z</time>
-<name><![CDATA[0000068]]></name>
-<sym>Waypoint</sym>
-<type>Punto iniziale</type>
-<extensions>
-<om:oruxmapsextensions xmlns:om="http://www.oruxmaps.com/oruxmapsextensions/1/0">
-<om:ext type="ICON" subtype="0">38</om:ext>
-</om:oruxmapsextensions>
-</extensions>
-</wpt>
-<wpt lat="46.4080485" lon="11.5892376">
-<ele>1669.90</ele>
-<time>2019-07-06T15:17:22Z</time>
-<name><![CDATA[0000069]]></name>
-<desc><![CDATA[<p><br /><h3>Nome: Segment: 1</h3><br />Orario inizio: 07/06/2019 09:29<br/>Orario fine: 07/06/2019 17:17<br/>Distanza: 17,4km (07:47)<br/>Tempo movimento: 05:03<br/>Velocità media: 2,24 km/h<br/>Velocità media mov.: 3,45 km/h<br/>Max. Velocità: 7,74 km/h<br/>Altitudine minima: 1578 m<br/>Altitudine massima: 2325 m<br/>Velocità di salita: 142,1 m/h<br/>Velocità di discesa: -250,3 m/h<br/>Dislivello positivo: 532 m<br/>Dislivello negativo: -988 m<br/>Tempo di salita: 03:44<br/>Tempo di discesa: 03:56<br/></p>]]></desc>
-<sym>Waypoint</sym>
-<type>Punto finale</type>
-<extensions>
-<om:oruxmapsextensions xmlns:om="http://www.oruxmaps.com/oruxmapsextensions/1/0">
-<om:ext type="ICON" subtype="0">15</om:ext>
-</om:oruxmapsextensions>
-</extensions>
-</wpt>
 <trk>
 <name><![CDATA[2019-07-06 09:29]]></name>
 <desc><![CDATA[<p>Orario inizio: 07/06/2019 09:29<br/>Orario fine: 07/06/2019 17:17<br/>Distanza: 17,4 km (07:47)<br/>Tempo movimento: 05:03<br/>Velocità media: 2,24 km/h<br/>Velocità media mov.: 3,45 km/h<br/>Max. Velocità: 7,74 km/h<br/>Altitudine minima: 1578 m<br/>Altitudine massima: 2325 m<br/>Velocità di salita: 144 m/h<br/>Velocità di discesa: -227,6 m/h<br/>Dislivello positivo: 502 m<br/>Dislivello negativo: -960 m<br/>Tempo di salita: 03:29<br/>Tempo di discesa: 04:13<br/></p><hr align="center" width="480" style="height: 2px; width: 517px"/>]]></desc>
