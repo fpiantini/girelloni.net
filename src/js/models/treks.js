@@ -394,7 +394,7 @@ export default class Treks {
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
-            '{  "id": "44", \
+              '{  "id": "44", \
                 "title": "Anello delle dolomiti friulane 4: dal rifugio Padova al rifugio Giaf", \
                 "description": "Anello delle dolomiti friulane 4: dal rifugio Padova al rifugio Giaf", \
                 "trackfile": "2019-07-24_0831__20190724_0831_adf4_rifugio_padova_rifugio_giaf.gpx", \
@@ -409,6 +409,114 @@ export default class Treks {
                 "trackfile": "2019-07_anello_delle_dolomiti_friulane.gpx", \
                 "nation": "Italia", \
                 "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "46", \
+                "title": "Dalla val di Fassa alla Val Gardena - Dolomiti 2019", \
+                "description": "Dalla val di Fassa alla val Gardena - Dolomiti 2019", \
+                "trackfile": "201907_dolomititrek2019.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "47", \
+                "title": "Catinaccio: dalle funivie di Pera di Fassa al rifugio Vajolet con salita al passo Santner", \
+                "description": "Catinaccio: dalle funivie di Pera di Fassa al rifugio Vajolet con salita al passo Santner", \
+                "trackfile": "20190714_intorno_al_rifugio_vajolet.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "48", \
+                "title": "Dal rifugio Vajolet al rifugio Sassopiatto", \
+                "description": "Dal rifugio Vajolet al rifugio Sassopiatto", \
+                "trackfile": "20190715_dal_rifugio_vajolet_al_rif_sassopiatto.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "49", \
+                "title": "Dal rifugio Sassopiatto a Plan de Gralba", \
+                "description": "Dal rifugio Sassopiatto a Plan de Gralba", \
+                "trackfile": "20190716_dal_rif_sassopiatto_a_plan_de_gralba.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "50", \
+                "title": "Da passo Gardena al rifugio Puez", \
+                "description": "Da passo Gardena al rifugio Puez", \
+                "trackfile": "20190717_da_passo_gardena_a_rif_puez.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "51", \
+                "title": "Dal rifugio Puez alla Cima Puez Est e ritorno", \
+                "description": "Dal rifugio Puez alla Cima Puez Est e ritorno", \
+                "trackfile": "20190718_da_rif_puez_alla_cima_puez_e_ritorno.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "52", \
+                "title": "Anello della Gardenaccia e salita al Col da la Sonè con partenza e arrivo al rifugio Puez", \
+                "description": "Anello della Gardenaccia e salita al Col da la Sonè con partenza e arrivo al rifugio Puez", \
+                "trackfile": "20190719_giro_altopiano_gardenaccia.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "53", \
+                "title": "Dal rifugio Puez al Col Raiser passando per la forcella de Forces de Sieles", \
+                "description": "Dal rifugio Puez al Col Raiser passando per la forcella de Forces de Sieles", \
+                "trackfile": "20190720_dal_rif_puez_al_col_raiser.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "54", \
+                "title": "Dal Col Raiser alla Malga Brogles passando dalla forcella Pana e proseguimento fino alla funivia a Furnes", \
+                "description": "Dal Col Raiser alla Malga Brogles passando dalla forcella Pana e proseguimento fino alla funivia a Furnes", \
+                "trackfile": "20190721_col_raiser_malga_brogles_dalla_forcella_pana.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "55", \
+                "title": "Andata e ritorno Col Raiser - Seceda", \
+                "description": "Andata e ritorno Col Raiser - Seceda", \
+                "trackfile": "20190721_col_raiser_seceda_a_r.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "56", \
+                "title": "Salita al Pic dal Col Raiser con discesa fino alla funivia Fermeda passando dalla malga del formaggio", \
+                "description": "Salita al Pic dal Col Raiser con discesa fino alla funivia Fermeda passando dalla malga del formaggio", \
+                "trackfile": "20190722_col_raiser_pic_e_discesa_alla_funivia_fermeda.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "57", \
+                "title": "Discesa da Seceda a Col Raiser passando da Pieralongia", \
+                "description": "Discesa da Seceda a Col Raiser passando da Pieralongia", \
+                "trackfile": "20190722_seceda_col_raiser_con_variante_pieralongia.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino Alto Adige", \
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
