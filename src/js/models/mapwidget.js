@@ -10,11 +10,12 @@ export default class MapWidget {
     this.otmLayer = this.openTopoMapLayer();
     this.fumLayer = this.forYouMapsLayer();
     this.hbLayer  = this.HikeBikeLayer();
+    this.mriLayer = this.mapRefugesInfoLayer();
     this.osmLayer = this.OpenStreetMapLayer();
     this.tfLayer  = this.thunderForestLandscapeLayer();
     this.mbLayer  = this.mapBoxLayer();
     this.wmtLayer = this.waymarkedTrailsLayer();
-  
+
     // define the Map object
     this.gMap = new lf.map(mapid, {
       layers: [ this.otmLayer ]
@@ -24,17 +25,18 @@ export default class MapWidget {
       "OpenTopoMap":      this.otmLayer,
       "4YouMap":          this.fumLayer,
       "Hike&BikeMap":     this.hbLayer,
+      "MapsRefugesInfo":  this.mriLayer,
       "OpenStreetMap":    this.osmLayer,
       "ThunderForest":    this.tfLayer,
       "MapBox":           this.mbLayer,
     };
-  
+
     this.overlaysMaps = {
       "WayMarkedTrails":  this.wmtLayer
     };
 
     lf.control.layers(this.baseMaps, this.overlaysMaps).addTo(this.gMap);
-  
+
   }
 
   // -------------------------------------------------------------------------
@@ -45,12 +47,12 @@ export default class MapWidget {
   // -------------------------------------------------------------------------
   getMap() {
     return this.gMap;
-  }  
+  }
 
   // -------------------------------------------------------------------------
   getGpxData() {
     return this.gpxData;
-  }  
+  }
 
   // -------------------------------------------------------------------------
   forYouMapsLayer() {
@@ -111,6 +113,14 @@ export default class MapWidget {
         id: 'mapbox.streets'
       });
   };
+
+  // -------------------------------------------------------------------------
+  mapRefugesInfoLayer() {
+    return lf.tileLayer(' http://maps.refuges.info/hiking/{z}/{x}/{y}.png',  {
+      attribution: '&copy; <a href="http://maps.refuges.info/">MapsRefugesInfo</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 22
+    });
+  }
 
   // -------------------------------------------------------------------------
   waymarkedTrailsLayer() {
