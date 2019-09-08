@@ -520,6 +520,78 @@ export default class Treks {
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "58", \
+                "title": "Anello delle Dolomiti Friulane: Salita al rifugio Giaf da Forni di Sopra", \
+                "description": "Anello delle Dolomiti Friulane Tappa 1: Salita al rifugio Giaf da Forni di Sopra", \
+                "trackfile": "adf01_salita_al_rifugiogiaf_da_forni_di_sopra.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "59", \
+                "title": "Anello delle Dolomiti Friulane Tappa 1: dal rifugio Giaf al rifugio Flaiban Pacherini", \
+                "description": "Anello delle Dolomiti Friulane Tappa 2: dal rifugio Giaf al rifugio Flaiban Pacherini", \
+                "trackfile": "adf02_dal_rifugiogiaf_al_rifugioflaibanpacherini.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "60", \
+                "title": "Anello delle Dolomiti Friulane Tappa 2: dal rifugio Flaiban Pacherini al rifugio Pordenone con salita sul monte Pramaggiore", \
+                "description": "Anello delle Dolomiti Friulane Tappa 3: dal rifugio Flaiban Pacherini al rifugio Pordenone con salita sul monte Pramaggiore", \
+                "trackfile": "adf03_dal_rifugioflaibanpacherini_al_rifugiopordenone.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "61", \
+                "title": "Anello delle Dolomiti Friulane Tappa 3: dal rifugio Pordenone al rifugio Padova", \
+                "description": "Anello delle Dolomiti Friulane Tappa 3: dal rifugio Pordenone al rifugio Padova", \
+                "trackfile": "adf04_dal_rifugiopordenone_al_rifugiopadova.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "62", \
+                "title": "Anello delle Dolomiti Friulane Tappa 4: dal rifugio Padova al rifugio Giaf", \
+                "description": "Anello delle Dolomiti Friulane Tappa 4: dal rifugio Padova al rifugio Giaf", \
+                "trackfile": "adf05_dal_rifugiopadova_al_rifugiogiaf.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "63", \
+                "title": "Anello delle Dolomiti Friulane: discesa dal rifugio Giaf a Forni di Sopra attraverso il Truoi dal Von", \
+                "description": "Anello delle Dolomiti Friulane: discesa dal rifugio Giaf a Forni di Sopra attraverso il Truoi dal Von", \
+                "trackfile": "adf06_discesa_dal_rifugiogiaf_a_forni_di_sopra.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "64", \
+                "title": "Anello delle Dolomiti Friulane. Percorso completo partendo da Forni di Sopra", \
+                "description": "Anello delle Dolomiti Friulane. Percorso completo partendo da Forni di Sopra", \
+                "trackfile": "adf00_completo.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "65", \
+                "title": "Dolomiti Friulane: semplice passeggiata sopra il rifugio Giaf (Monte Boschet)", \
+                "description": "Dolomiti Friulane: semplice passeggiata sopra il rifugio Giaf (Monte Boschet)", \
+                "trackfile": "breve_escurione_sopra_il_rifugio_giaf.gpx", \
+                "nation": "Italia", \
+                "region": "Friuli Venezia Giulia", \
+                "area": "Dolomiti", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];
