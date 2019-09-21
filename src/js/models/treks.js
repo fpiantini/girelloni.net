@@ -592,6 +592,24 @@ export default class Treks {
                 "area": "Dolomiti", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "66", \
+                "title": "Da Fornovolasco (Aleva) al Monte Forato", \
+                "description": "Da Fornovolasco (Aleva) al Monte Forato", \
+                "trackfile": "20190915_MonteForato.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Alpi Apuane", \
+                "clArea": "Toscana" \
+            }',
+            '{  "id": "67", \
+                "title": "La ferrata del Monte Procinto", \
+                "description": "La ferrata del Monte Procinto", \
+                "trackfile": "20190921_FerrataProcinto.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Alpi Apuane", \
+                "clArea": "Toscana" \
+            }',
         ];
 
         this.treksList = [];
