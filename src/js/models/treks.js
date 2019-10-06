@@ -610,6 +610,24 @@ export default class Treks {
                 "area": "Alpi Apuane", \
                 "clArea": "Toscana" \
             }',
+            '{  "id": "68", \
+                "title": "Lago di Garda: la ferrata Susatti e Cima Capi", \
+                "description": "Lago di Garda: la ferrata Susatti e Cima Capi", \
+                "trackfile": "20191005_FerrataSusattiCimaCapi.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino", \
+                "area": "Lago di Garda", \
+                "clArea": "Italia" \
+            }',
+            '{  "id": "69", \
+                "title": "Lago di Garda: la ferrata Gerardo Sega", \
+                "description": "Lago di Garda: la ferrata Gerardo Sega", \
+                "trackfile": "20191006_FerrataGerardoSega.gpx", \
+                "nation": "Italia", \
+                "region": "Trentino", \
+                "area": "Lago di Garda", \
+                "clArea": "Italia" \
+            }',
         ];
 
         this.treksList = [];
