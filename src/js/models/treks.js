@@ -628,6 +628,15 @@ export default class Treks {
                 "area": "Lago di Garda", \
                 "clArea": "Italia" \
             }',
+            '{  "id": "70", \
+                "title": "Monte Morello: da Sesto Fiorentino alle Croci di Calenzano", \
+                "description": "Monte Morello: da Sesto Fiorentino alle Croci di Calenzano", \
+                "trackfile": "20200104_SestoLeCroci.gpx", \
+                "nation": "Italia", \
+                "region": "Toscana", \
+                "area": "Monte Morello", \
+                "clArea": "Toscana" \
+            }',
         ];
 
         this.treksList = [];
